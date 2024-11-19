@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AS.Travels</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/logo-removebg-preview.png" alt="" height="90px"/>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Destination.html">Destination</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="featured">
+        <div class="small-container">
+        <div class="row row-2">
+            <h1>Visiting places</h1>
+            <input id="search" onkeyup="filter()" type="text" placeholder="search here">
+            <button onclick="sortList()" class="sortbtn">Sort By Price
+            </button>
+        </div>
+        <div class="row" id="Product-list">
+            <div class="col-4" data-target="#modal1">
+                <img src="images/images.png" />
+                <h4 class="Product-name">Maldives</h4>
+                <div class="rating">
+                    <i class="fa fa-star">⭐</i>
+                    <i class="fa fa-star">⭐</i>
+                    <i class="fa fa-star">⭐</i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o">⭐</i>
+                </div>
+                $<span class="Price">80</span>
+            </div>
+            <div class="col-4" data-target="#modal2">
+                <img src="images/america.png" />
+                <h4 class="Product-name">America</h4>
+                <div class="rating">
+                    <i class="fa fa-star">⭐</i>
+                    <i class="fa fa-star">⭐</i>
+                    <i class="fa fa-star">⭐</i>
+                    <i class="fa fa-star">⭐</i>
+                    <i class="fa fa-star-o">🌟</i>
+                </div>
+                $<span class="Price">30</span>
+            </div>
+            <div class="col-4" data-target="#modal3">
+                <img src="images/krabi.png" />
+                <h4 class="Product-name">Krabi</h4>
+                <div class="rating">
+                    <i class="fa fa-star">⭐</i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star">⭐</i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o">⭐</i>
+                </div>
+                $<span class="Price">20</span>
+            </div>
+            <div class="col-4" data-target="#modal4">
+                <img src="images/malaysia6.png" />
+                <h4 class="Product-name">Malaysia</h4>
+                <div class="rating">
+                    <i class="fa fa-star">⭐</i>
+                    <i class="fa fa-star">⭐</i>
+                    <i class="fa fa-star">⭐</i>
+                    <i class="fa fa-star">⭐</i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                $<span class="Price">50</span>
+            </div>
+            <div class="col-4" data-target="#modal5">
+                <img src="images/europe.png" />
+                <h4 class="Product-name">Europe</h4>
+                <div class="rating">
+                    <i class="fa fa-star">⭐</i>
+                    <i class="fa fa-star">⭐</i>
+                    <i class="fa fa-star">⭐</i>
+                    <i class="fa fa-star">⭐</i>
+                    <i class="fa fa-star-half-o">🌟</i>
+                </div>
+                $<span class="Price">110</span>
+            </div>
+            <div class="col-4" data-target="#modal6">
+                <img src="images/taj mehal 2.png" />
+                <h4 class="Product-name">India Taj Mehal</h4>
+                <div class="rating">
+                    <i class="fa fa-star">⭐</i>
+                    <i class="fa fa-star">⭐</i>
+                    <i class="fa fa-star">⭐</i>
+                    <i class="fa fa-star">⭐</i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                $<span class="Price">35</span>
+            </div>
+            <div class="col-4" data-target="#modal7">
+                <img src="images/italy.png" />
+                <h4 class="Product-name">Italy</h4>
+                <div class="rating">
+                    <i class="fa fa-star">⭐</i>
+                    <i class="fa fa-star">⭐</i>
+                    <i class="fa fa-star">⭐</i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                $<span class="Price">95</span>
+            </div>
+            <div class="col-4" data-target="#modal8">
+                <img src="images/singhapur2.png" />
+                <h4 class="Product-name">Singapore</h4>
+                <div class="rating">
+                    <i class="fa fa-star">⭐</i>
+                    <i class="fa fa-star">⭐</i>
+                    <i class="fa fa-star">⭐</i>
+                    <i class="fa fa-star">⭐</i>
+                    <i class="fa fa-star-half-o">🌟</i>
+                </div>
+                $<span class="Price">150</span>
+            </div>
+        </div>
+        <div class="page-btn">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>&#10137;</span>
+        </div>
+    </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <a href="index.html" class="logo-white">AS.Travels</a>
+                </div>
+                <div class="footer-col-2">
+                    <a href="index.html" class="logo-white">AS.Travels</a>
+                    <p>Traveling gives us chance to remove the burder of life.</p>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Folllow us </h3>
+                    <ul>
+                        <li>facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">copyright2021</p>
+        </div>
+    </div>
+    <div class="modal" id="modal1">
+        <div class="single-item">
+            <div class="small-container">
+                <div class="modal-header">
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/images.png" width="100%" />
+                    </div>
+                    <div class="col-2">
+                        <p>Home/Location</p>
+                        <h1>Maldives</h1>
+                        <h4>Price: $80</h4>
+                        <h4>Quantity:</h4>
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <br>
+                        <a href="" class="btn">Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal2">
+        <div class="single-item">
+            <div class="small-container">
+                <div class="modal-header">
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/america.png" width="100%" />
+                    </div>
+                    <div class="col-2">
+                        <p>Home/Location</p>
+                        <h1>America</h1>
+                        <h4>Price: $80</h4>
+                        <h4>Quantity: </h4>
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <br>
+                        <a href="" class="btn">add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal3">
+        <div class="single-item">
+            <div class="small-container">
+                <div class="modal-header">
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/krabi.png" width="100%" />
+                    </div>
+                    <div class="col-2">
+                        <p>Home/Location</p>
+                        <h1>Krabi</h1>
+                        <h4>Price$80</h4>
+                        <h4>Quantity</h4>
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <br>
+                        <a href="" class="btn">add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal4">
+        <div class="single-item">
+            <div class="small-container">
+                <div class="modal-header">
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/malaysia6.png" width="100%" />
+                    </div>
+                    <div class="col-2">
+                        <p>Home/Location</p>
+                        <h1>Malaysia</h1>
+                        <h4>Price$80</h4>
+                        <h4>Quantity</h4>
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <br>
+                        <a href="" class="btn">add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal5">
+        <div class="single-item">
+            <div class="small-container">
+                <div class="modal-header">
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/europe.png" width="100%" />
+                    </div>
+                    <div class="col-2">
+                        <p>Home/Location</p>
+                        <h1>Europe</h1>
+                        <h4>Price$80</h4>
+                        <h4>Quantity</h4>
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <br>
+                        <a href="" class="btn">add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal6">
+        <div class="single-item">
+            <div class="small-container">
+                <div class="modal-header">
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/taj mehal 2.png" width="100%" />
+                    </div>
+                    <div class="col-2">
+                        <p>Home/Location</p>
+                        <h1>India Taj Mehal</h1>
+                        <h4>Price$80</h4>
+                        <h4>Quantity</h4>
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <br>
+                        <a href="" class="btn">add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal7">
+        <div class="single-item">
+            <div class="small-container">
+                <div class="modal-header">
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/italy.png" width="100%" />
+                    </div>
+                    <div class="col-2">
+                        <p>Home/Location</p>
+                        <h1>Italy</h1>
+                        <h4>Price$80</h4>
+                        <h4>Quantity</h4>
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <br>
+                        <a href="" class="btn">add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal8">
+        <div class="single-item">
+            <div class="small-container">
+                <div class="modal-header">
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/singhapur2.png" width="100%" />
+                    </div>
+                    <div class="col-2">
+                        <p>Home/Location</p>
+                        <h1>Singapore</h1>
+                        <h4>Price$80</h4>
+                        <h4>Quantity</h4>
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                        </select>
+                        <br>
+                        <a href="" class="btn">add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="overlay"></div>
+
+</body>
+
+<script src="script.js"></script>
+</html>
